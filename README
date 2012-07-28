@@ -1,0 +1,26 @@
+/* 
+ * @author: Ayon Chakraborty
+ * @course project: Network Security
+ * @school: SUNY Stony Brook 
+ *
+ */
+
+## This application works as follows:
+Given the twitter user ids of users A and B, assuming A is trying to follow B. The application will firstly warn user B, if account A is a suspecious one. Apart from that it will tell B, his profile similarty with A, which ranges from 1 star (*) to 5 stars (*****)
+
+## The project report is at: http://www.cs.sunysb.edu/~aychakrabort/courses/cse508/report.pdf
+
+## Some datasets which we used: (links available) http://www.cs.sunysb.edu/~aychakrabort/courses/cse508/
+
+
+## The source code functions as follows:
+
+1. SampleTestGUI.java is the top level GUI application, where inputs for A and B's user ids are to be passed.
+2. It makes use of SampleTest.java which actually:
+   a) downloads the profiles for A and B
+   b) parses the XML files and remove special / non english characters (validateXML.java)
+   c) calls NaiveBayes.java to detect whether anything suspecious is there. /* works on a data set of spam words */
+   d) calls FeatureExtraction.java to calculate the different features of individual profiles */
+   e) passes the extracted features on a trained model to get the rating.
+
+
